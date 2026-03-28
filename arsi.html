@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Arsi | The Jewel of Oromia, Ethiopia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2b5e3b;
+            --secondary-color: #c49a1c;
+            --accent-color: #8b4513;
+            --light-bg: #f9f5eb;
+            --dark-text: #1e3c2c;
+            --text-color: #2c3e50;
+            --text-light: #5a6b7a;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, rgba(43, 94, 59, 0.95), rgba(138, 69, 19, 0.9)), url('images/arsi-landscape.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeInDown 1s ease;
+        }
+
+        .header p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        /* Navigation */
+        .nav {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary-color);
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .card-content p {
+            color: var(--text-light);
+        }
+
+        /* About Section */
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .about-image {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            padding: 60px 0;
+            border-radius: 30px;
+            margin: 40px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Culture Section */
+        .culture-item {
+            text-align: center;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .culture-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .culture-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .culture-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Places Grid */
+        .place-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .place-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .place-content {
+            padding: 20px;
+        }
+
+        .place-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .place-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--secondary-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+            width: 50%;
+            padding: 20px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -35px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -35px;
+        }
+
+        .timeline-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .timeline-date {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* Image Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            height: 300px;
+            cursor: pointer;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            color: var(--white);
+            padding: 30px 20px;
+            transform: translateY(100%);
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-overlay h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .gallery-overlay p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* Facts Section */
+        .facts-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .fact-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .fact-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            min-width: 70px;
+            text-align: center;
+        }
+
+        .fact-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--white);
+            padding: 60px 0;
+            border-radius: 30px;
+        }
+
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial-item {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .testimonial-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 4px solid var(--secondary-color);
+        }
+
+        .testimonial-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .testimonial-role {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--text-light);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .dot.active {
+            background: var(--secondary-color);
+            transform: scale(1.3);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1a3a24, #2b5e3b);
+            color: var(--white);
+            padding: 60px 0 20px;
+            margin-top: 80px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-links h4 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary-color);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            border: none;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .grid-2, .grid-3, .grid-4 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .facts-container {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 4rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .grid-2, .grid-3, .grid-4 {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 3rem;
+            }
+
+            .header p {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 60px;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content::before,
+            .timeline-item:nth-child(even) .timeline-content::before {
+                left: -25px;
+            }
+
+            .facts-container {
+                grid-template-columns: 1fr;
+            }
+
+            .fact-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .stat-item h3 {
+                font-size: 2.5rem;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo">፡ አርሲ · ARSI · አርሲ ፡</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#culture">Culture</a>
+                <a href="#places">Places</a>
+                <a href="#history">History</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header/Hero Section -->
+    <header class="header" id="home">
+        <div class="container">
+            <h1>Welcome to Arsi</h1>
+            <p>The Jewel of Oromia - Where Mountains Touch the Sky and Culture Runs Deep</p>
+        </div>
+    </header>
+
+    <!-- Hidden Images - Replace src paths with your actual image paths -->
+    <!-- Hero Images -->
+    <img src="path/to/your/arsi-mountains.jpg" alt="Beautiful mountains and landscape of Arsi zone in Oromia, Ethiopia" style="display: none;">
+    <img src="path/to/your/arsi-hero.jpg" alt="Panoramic view of Arsi highlands with green fields and mountains" style="display: none;">
+    <img src="path/to/your/arsi-about.jpg" alt="Traditional Arsi Oromo people in cultural clothing" style="display: none;">
+    
+    <!-- Culture Images -->
+    <img src="path/to/your/arsi-culture-1.jpg" alt="Traditional Arsi Oromo cultural ceremony and dance" style="display: none;">
+    <img src="path/to/your/arsi-culture-2.jpg" alt="Arsi elders in traditional clothing discussing community matters" style="display: none;">
+    <img src="path/to/your/arsi-culture-3.jpg" alt="Traditional Arsi coffee ceremony preparation" style="display: none;">
+    
+    <!-- Place Images -->
+    <img src="path/to/your/arsi-lake.jpg" alt="Beautiful Lake Ziway in Arsi zone with birds" style="display: none;">
+    <img src="path/to/your/arsi-mountains-scenic.jpg" alt="Scenic mountains of Arsi with green valleys" style="display: none;">
+    <img src="path/to/your/arsi-national-park.jpg" alt="Wild animals in Arsi National Park" style="display: none;">
+    <img src="path/to/your/arsi-waterfall.jpg" alt="Beautiful waterfall in Arsi highlands" style="display: none;">
+    
+    <!-- Gallery Images -->
+    <img src="path/to/your/gallery-1.jpg" alt="Mount Arsi peak with snow" style="display: none;">
+    <img src="path/to/your/gallery-2.jpg" alt="Rivers flowing through Arsi valleys" style="display: none;">
+    <img src="path/to/your/gallery-3.jpg" alt="Traditional Arsi village with round houses" style="display: none;">
+    <img src="path/to/your/gallery-4.jpg" alt="Coffee plantation in Arsi highlands" style="display: none;">
+    <img src="path/to/your/gallery-5.jpg" alt="Wild animals including zebras in Arsi" style="display: none;">
+    <img src="path/to/your/gallery-6.jpg" alt="Sunset over Arsi mountains" style="display: none;">
+    
+    <!-- Testimonial Images -->
+    <img src="path/to/your/testimonial-1.jpg" alt="Elder from Arsi community" style="display: none;">
+    <img src="path/to/your/testimonial-2.jpg" alt="Young Arsi student" style="display: none;">
+    <img src="path/to/your/testimonial-3.jpg" alt="Arsi cultural leader" style="display: none;">
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Arsi</h2>
+            <p class="section-subtitle">Discover the rich history, culture, and natural beauty of one of Ethiopia's most remarkable regions</p>
+            
+            <div class="grid-2">
+                <div class="about-text">
+                    <p>Arsi is a zone in the Oromia Region of Ethiopia, named after the Arsi Oromo people who have inhabited this land for centuries. The zone is known for its breathtaking highlands, fertile valleys, and rich cultural heritage. Mount Arsi, one of the highest peaks in the region, stands as a sentinel over this beautiful land.</p>
+                    <p>The Arsi people are renowned for their bravery, cultural traditions, and agricultural expertise. The region produces some of Ethiopia's finest coffee, wheat, and barley. The famous Arsi cattle breed is known throughout Ethiopia for its quality.</p>
+                    <p>With its moderate climate, stunning landscapes including lakes, mountains, and national parks, Arsi has become an increasingly important destination for travelers seeking authentic Ethiopian experiences. The region is also home to diverse wildlife including the endemic mountain nyala and other unique species.</p>
+                </div>
+                <div>
+                    <img src="path/to/your/arsi-about.jpg" alt="Beautiful landscape of Arsi with green hills and traditional village" class="about-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <div class="container">
+        <div class="stats">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>12+</h3>
+                    <p>Districts</p>
+                </div>
+                <div class="stat-item">
+                    <h3>4,000+</h3>
+                    <p>Square Miles</p>
+                </div>
+                <div class="stat-item">
+                    <h3>3M+</h3>
+                    <p>Population</p>
+                </div>
+                <div class="stat-item">
+                    <h3>4000m+</h3>
+                    <p>Highest Peak</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Culture Section -->
+    <section id="culture">
+        <div class="container">
+            <h2 class="section-title">Culture & Traditions</h2>
+            <p class="section-subtitle">The rich cultural heritage of the Arsi people</p>
+            
+            <div class="grid-3">
+                <div class="culture-item">
+                    <div class="culture-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <img src="path/to/your/arsi-culture-1.jpg" alt="Traditional Arsi music and dance ceremony" class="culture-image">
+                    <h3>Music & Dance</h3>
+                    <p>Traditional Arsi music features the krar, masenqo, and powerful vocal performances. The legendary singer Ali Birra hails from this region.</p>
+                </div>
+                
+                <div class="culture-item">
+                    <div class="culture-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <img src="path/to/your/arsi-culture-2.jpg" alt="Traditional Arsi coffee ceremony" class="culture-image">
+                    <h3>Coffee Ceremony</h3>
+                    <p>The Arsi coffee ceremony is an elaborate ritual that represents hospitality, respect, and community bonding. Arsi produces some of Ethiopia's finest coffee.</p>
+                </div>
+                
+                <div class="culture-item">
+                    <div class="culture-icon">
+                        <i class="fas fa-hands"></i>
+                    </div>
+                    <img src="path/to/your/arsi-culture-3.jpg" alt="Arsi elders in traditional meeting" class="culture-image">
+                    <h3>Elder Council</h3>
+                    <p>The traditional Gadaa system of governance is still practiced, with elders making important community decisions through consensus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Places Section -->
+    <section id="places">
+        <div class="container">
+            <h2 class="section-title">Beautiful Places in Arsi</h2>
+            <p class="section-subtitle">Explore the natural wonders and scenic landscapes</p>
+            
+            <div class="grid-4">
+                <div class="place-card">
+                    <img src="path/to/your/arsi-lake.jpg" alt="Lake Ziway in Arsi" class="place-image">
+                    <div class="place-content">
+                        <h3>Lake Ziway</h3>
+                        <p>One of Ethiopia's largest Rift Valley lakes, home to hippos and diverse bird species.</p>
+                    </div>
+                </div>
+                
+                <div class="place-card">
+                    <img src="path/to/your/arsi-mountains-scenic.jpg" alt="Mount Arsi" class="place-image">
+                    <div class="place-content">
+                        <h3>Mount Arsi</h3>
+                        <p>The highest peak in the region, offering breathtaking views and hiking opportunities.</p>
+                    </div>
+                </div>
+                
+                <div class="place-card">
+                    <img src="path/to/your/arsi-national-park.jpg" alt="Arsi National Park" class="place-image">
+                    <div class="place-content">
+                        <h3>Arsi National Park</h3>
+                        <p>Protected area home to mountain nyala, Menelik's bushbuck, and other endemic wildlife.</p>
+                    </div>
+                </div>
+                
+                <div class="place-card">
+                    <img src="path/to/your/arsi-waterfall.jpg" alt="Waterfalls in Arsi" class="place-image">
+                    <div class="place-content">
+                        <h3>Highland Waterfalls</h3>
+                        <p>Spectacular waterfalls cascading through the lush green highlands.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Timeline -->
+    <section id="history">
+        <div class="container">
+            <h2 class="section-title">Historical Timeline</h2>
+            <p class="section-subtitle">The rich history of the Arsi people through the ages</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Ancient Settlement</h3>
+                        <div class="timeline-date">~1000 BCE</div>
+                        <p>The Arsi Oromo people establish settlements in the highlands, developing their unique culture and agricultural practices.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Gadaa System</h3>
+                        <div class="timeline-date">~16th Century</div>
+                        <p>The traditional Gadaa democratic system flourishes, organizing society into age grades and governing through elected leaders.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Resistance Period</h3>
+                        <div class="timeline-date">19th Century</div>
+                        <p>The Arsi people become known for their fierce resistance against expansion, earning a reputation as formidable warriors.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Modern Era</h3>
+                        <div class="timeline-date">1991 - Present</div>
+                        <p>Arsi becomes a zone in the Oromia Region, experiencing development while preserving its rich cultural heritage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facts Section -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Did You Know?</h2>
+            <p class="section-subtitle">Interesting facts about Arsi</p>
+            
+            <div class="facts-container">
+                <div class="fact-card">
+                    <div class="fact-icon">
+                        <i class="fas fa-cow"></i>
+                    </div>
+                    <div class="fact-content">
+                        <h3>Arsi Cattle</h3>
+                        <p>The Arsi breed of cattle is one of Ethiopia's most important, known for its milk production and adaptability to highland conditions.</p>
+                    </div>
+                </div>
+                
+                <div class="fact-card">
+                    <div class="fact-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="fact-content">
+                        <h3>Mount Arsi</h3>
+                        <p>Standing at over 4,000 meters, Mount Arsi is one of the highest peaks in the Oromia region and a sacred site for local communities.</p>
+                    </div>
+                </div>
+                
+                <div class="fact-card">
+                    <div class="fact-icon">
+                        <i class="fas fa-chess-queen"></i>
+                    </div>
+                    <div class="fact-content">
+                        <h3>Warrior Tradition</h3>
+                        <p>The Arsi warriors were renowned for their bravery and horsemanship, playing a crucial role in regional history.</p>
+                    </div>
+                </div>
+                
+                <div class="fact-card">
+                    <div class="fact-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="fact-content">
+                        <h3>Agricultural Heartland</h3>
+                        <p>Arsi is considered the breadbasket of Ethiopia, producing vast quantities of wheat, barley, and other grains.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">Photo Gallery</h2>
+            <p class="section-subtitle">Capturing the beauty and spirit of Arsi</p>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="path/to/your/gallery-1.jpg" alt="Mount Arsi peak with snow" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Mount Arsi</h3>
+                        <p>The majestic peak touches the clouds</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="path/to/your/gallery-2.jpg" alt="Rivers in Arsi" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Highland Rivers</h3>
+                        <p>Crystal clear waters flowing through valleys</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="path/to/your/gallery-3.jpg" alt="Traditional Arsi village" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Traditional Village</h3>
+                        <p>Round houses dot the landscape</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="path/to/your/gallery-4.jpg" alt="Coffee plantation" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Coffee Fields</h3>
+                        <p>Where Ethiopia's finest coffee grows</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="path/to/your/gallery-5.jpg" alt="Wildlife in Arsi" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Wildlife</h3>
+                        <p>Mountain nyala in their natural habitat</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="path/to/your/gallery-6.jpg" alt="Sunset over Arsi" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h3>Golden Sunset</h3>
+                        <p>Evening paints the sky in brilliant colors</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Voices of Arsi</h2>
+            <p class="section-subtitle">What people say about their homeland</p>
+            
+            <div class="testimonial-slider" id="testimonialSlider">
+                <div class="testimonial-item active">
+                    <img src="path/to/your/testimonial-1.jpg" alt="Elder from Arsi" class="testimonial-image">
+                    <p class="testimonial-text">"Arsi is not just a place; it's our identity. The mountains, the rivers, and our traditions connect us to our ancestors and guide our future."</p>
+                    <p class="testimonial-author">Elder Abdi Mohammed</p>
+                    <p class="testimonial-role">Community Leader, Arsi</p>
+                </div>
+                
+                <div class="testimonial-item">
+                    <img src="path/to/your/testimonial-2.jpg" alt="Young Arsi student" class="testimonial-image">
+                    <p class="testimonial-text">"Growing up in Arsi, I learned the value of community, respect for elders, and the beauty of our culture. It shapes who I am today."</p>
+                    <p class="testimonial-author">Fatuma Ahmed</p>
+                    <p class="testimonial-role">Student, Adama University</p>
+                </div>
+                
+                <div class="testimonial-item">
+                    <img src="path/to/your/testimonial-3.jpg" alt="Arsi cultural leader" class="testimonial-image">
+                    <p class="testimonial-text">"The Gadaa system teaches us democracy and wisdom. In Arsi, we preserve these values while embracing progress."</p>
+                    <p class="testimonial-author">Gadaa Leader Desta Kebede</p>
+                    <p class="testimonial-role">Cultural Preserver</p>
+                </div>
+            </div>
+            
+            <div class="slider-dots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">ARSI</div>
+                    <p>The Jewel of Oromia - Where mountains touch the sky and culture runs deep.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Arsi</a></li>
+                        <li><a href="#culture">Culture</a></li>
+                        <li><a href="#places">Places to Visit</a></li>
+                        <li><a href="#history">History</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Arsi Zone, Oromia, Ethiopia</li>
+                        <li><i class="fas fa-envelope"></i> info@arsi.com</li>
+                        <li><i class="fas fa-phone"></i> +251 91 234 5678</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to learn more about Arsi</p>
+                    <form style="margin-top: 15px;">
+                        <input type="email" placeholder="Your Email" style="padding: 10px; width: 100%; border: none; border-radius: 5px; margin-bottom: 10px;">
+                        <button style="background: var(--secondary-color); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 About Arsi. All rights reserved. Designed with ❤️ for the people of Arsi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Testimonial Slider
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.testimonial-item');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+                dots[i].classList.remove('active');
+            }
+            
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            
+            slides[slideIndex - 1].style.display = 'block';
+            dots[slideIndex - 1].classList.add('active');
+            
+            setTimeout(showSlides, 5000); // Change slide every 5 seconds
+        }
+
+        function currentSlide(index) {
+            slideIndex = index;
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+                dots[i].classList.remove('active');
+            }
+            slides[index].style.display = 'block';
+            dots[index].classList.add('active');
+        }
+
+        // Initialize slider
+        if (slides.length > 0) {
+            showSlides();
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background change on scroll
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                nav.style.backdropFilter = 'blur(10px)';
+            } else {
+                nav.style.backgroundColor = 'var(--white)';
+                nav.style.backdropFilter = 'none';
+            }
+        });
+
+        // Animate elements on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.card, .culture-item, .place-card, .fact-card, .timeline-item');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        // Set initial styles for animated elements
+        document.querySelectorAll('.card, .culture-item, .place-card, .fact-card, .timeline-item').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+
+        // Counter animation for stats
+        const statNumbers = document.querySelectorAll('.stat-item h3');
+        let counted = false;
+
+        const countStats = () => {
+            const statsSection = document.querySelector('.stats');
+            const statsPosition = statsSection.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+
+            if (statsPosition < screenPosition && !counted) {
+                counted = true;
+                
+                statNumbers.forEach(stat => {
+                    const target = parseInt(stat.innerText);
+                    let count = 0;
+                    const increment = target / 50;
+                    
+                    const updateCount = () => {
+                        if (count < target) {
+                            count += increment;
+                            stat.innerText = Math.ceil(count) + (stat.innerText.includes('+') ? '+' : '');
+                            setTimeout(updateCount, 30);
+                        } else {
+                            stat.innerText = target + (stat.innerText.includes('+') ? '+' : '');
+                        }
+                    };
+                    
+                    updateCount();
+                });
+            }
+        };
+
+        window.addEventListener('scroll', countStats);
+    </script>
+</body>
+</html>
